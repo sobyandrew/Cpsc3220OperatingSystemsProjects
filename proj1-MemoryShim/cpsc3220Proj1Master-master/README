@@ -1,0 +1,16 @@
+CPSC 3220 Project 1 Andrew Soby Asoby C28319723
+
+leakcount.c and memory_shim.c
+During leakcount I had issues with calling exec and setting the correct
+environment variable but once i sorted that out it seemed to be working
+
+in memory shim I had issues with deciding how it will communicate to leakcount
+and ultimately decided to do everything in memory shim in the destructor and
+constructor of the shim. Once i got the linked lists working I still had some
+slight differences with the test cases and realized this was from tabs.
+
+sctracer.c
+I had an issue trying to parse the input of argv[1] as it could be variable,
+but once I got that down it seemed to work better now that I had knowledge with
+exec. I also was having an error where I received more calls, so I divided
+everything by two to fix it.

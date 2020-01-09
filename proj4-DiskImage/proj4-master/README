@@ -1,0 +1,41 @@
+Daniel Smith dnsmith
+Andrew Soby asoby
+Cpsc 3220
+Project 4
+
+
+DESIGN:
+
+  Our program handles analyzing a disk image using several functions. The
+  first function is goThroughDirectory. This function is designed to go through the root
+  directory in FAT then recursively call itself to find other files and directories.
+  Once we find a file deleted or normal we will call the next function getFileContents.
+  This function is designed to get the file contents from the disk image. This
+  function calls getFATEntry to repeatedly find the correct FAT entry and will continue
+  to get the file contents. After this function has ended we call our last function
+  writeFile where we pass in the file path the contents the size and open up the file and
+  write the contents into the file.
+
+KNOWN PROBLEMS:
+
+  If we don't make sure to read only, we overwrite the image file. Only God knows how.
+  We also are not checking a deleted file to see if the original contents were
+  overwritten by something else and truncating what was overwritten.
+
+Story Continued:
+
+  Luckily enough the suspect that was captured didn't know much about our plans
+to continue bank heists within Grunfolle. He was merely a pawn in this game to us.
+Our coworkers have believed this whole time that we could barely recover the files
+from the disk drives. Little did they know we were doing much more. We were covering our tracks.
+You see being under cover as a digital forensic investigator in a police department
+has its advantages when we were working their to cover our tracks as the leaders of
+the kitten bank heist gang. We had access to all the evidence that could possibly incriminate us.
+There are a lot of working parts in our gang, this is why its difficult to prevent these
+little slip ups like our little friend the suspect who got caught. Thats okay though,
+we keep our circle tight so he doesn't know who we actually are. We will use our cover against him,
+however, he will go down with this crime and if we are lucky enough we can pin it
+on our rival gang the canines. Our plans don't stop at this bank heist, we will
+continue to further steal from other banks within Karolynia until we can expand our
+operations outside of this state. The kitten bank heist gang will live on to see another
+day because of our superior FAT Image analyzing skills.
